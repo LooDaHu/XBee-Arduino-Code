@@ -4,7 +4,7 @@
 #include "Config.h"
 
 
-SoftwareSerial XBeeSerialPort(2, 3); //define a new software serial for zigbee module.
+SoftwareSerial XBeeSerialPort(2, 3); //define a new software serial for XBee module.
 XBee node = XBee(); //define new xbee object.
 XBeeAddress64 super_node_address;
 XBeeAddress64 response_address;
@@ -130,6 +130,8 @@ void access_level1(uint8_t *level_request_msg)
   node.send(tx16);
 }
 
+
+//This a wrong example for bit-shifting operation of Arduino
 uint32_t combine_SL(uint8_t sl1, uint8_t sl2, uint8_t sl3, uint8_t sl4)
 {
   uint32_t temp_SL;
@@ -138,7 +140,7 @@ uint32_t combine_SL(uint8_t sl1, uint8_t sl2, uint8_t sl3, uint8_t sl4)
   temp_SL |= sl3 << 8;
   temp_SL |= sl4;
   return temp_SL;
-}
+}  
 
 void setMYaddress(uint8_t *value)
 {
