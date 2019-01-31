@@ -38,6 +38,8 @@ SoftwareSerial nss(ssRX, ssTX);
 
 XBee xbee = XBee();
 
+
+//Here is example for AT command
 uint8_t AkCmd[] = {'+','+','+'};
 
 uint8_t MyCmd[] = {'M','Y'};
